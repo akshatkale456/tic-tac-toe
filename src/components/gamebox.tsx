@@ -58,7 +58,7 @@ export function Game() {
 
                <div className="mb-8 text-center">
 
-                    <div className="bg-orange-900 px-6 py-2 rounded-full shadow-lg text-white border border-orange-600">
+                    <div className="bg-orange-900 dark:bg-gray-800 px-6 py-2 rounded-full shadow-lg text-white border border-orange-600 dark:border-gray-700">
                          {winner ? (
                               <span className="text-xl font-bold text-white ">
                                    Game Over!
@@ -72,7 +72,7 @@ export function Game() {
                </div>
 
 
-               <div className="grid grid-cols-3 gap-3 bg-orange-400 p-4 rounded-2xl shadow-2xl border border-slate-700 backdrop-blur-sm">
+               <div className="grid grid-cols-3 gap-3 bg-orange-400 dark:bg-gray-700 p-4 rounded-2xl shadow-2xl border border-slate-700 dark:border-gray-600 backdrop-blur-sm">
                     {board.map((cell, index) => {
                          const isX = cell === "x";
                          const isO = cell === "o";
@@ -84,12 +84,12 @@ export function Game() {
                                    onClick={() => hnadelclick(index)}
                                    className={`
                                         w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 
-                                        bg-orange-200 rounded-xl flex items-center justify-center 
+                                        bg-orange-200 dark:bg-gray-600 rounded-xl flex items-center justify-center 
                                         text-5xl sm:text-6xl font-black shadow-inner
                                         transition-all duration-200 transform hover:scale-105 
-                                        cursor-pointer hover:bg-orange-300
-                                        ${isX ? "text-orange-600" : ""}
-                                        ${isO ? "text-teal-600" : ""}
+                                        cursor-pointer hover:bg-orange-300 dark:hover:bg-gray-500
+                                        ${isX ? "text-orange-600 dark:text-blue-400" : ""}
+                                        ${isO ? "text-teal-600 dark:text-rose-400" : ""}
                                    `}
                               >
                                    {cell && (
@@ -105,14 +105,14 @@ export function Game() {
 
                <div className="mt-8 min-h-60px flex flex-col items-center gap-4">
                     {alert && (
-                         <div className=" bg-orange-600 text-white  p-4 rounded-lg border border-slate-700 shadow-xl">
+                         <div className=" bg-orange-600 dark:bg-gray-800 text-white  p-4 rounded-lg border border-slate-700 dark:border-gray-600 shadow-xl">
                               <Ilert state={winner} />
                          </div>
                     )}
 
                     <button
                          onClick={resetgame}
-                         className="px-8 py-3 bg-orange-900 text-white font-bold rounded-lg 
+                         className="px-8 py-3 bg-orange-900 dark:bg-blue-600 text-white font-bold rounded-lg 
                          shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1 transition-all duration-200
                          active:scale-95 text-lg"
                     >

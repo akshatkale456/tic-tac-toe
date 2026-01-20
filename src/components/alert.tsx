@@ -20,7 +20,7 @@ export function Ilert({ state }: AlertProps) {
 
      return (
           <div className={`
-               px-8 py-4 rounded-xl border-2 bg-slate-800/50 backdrop-blur-sm
+               px-8 py-4 rounded-xl border-2 bg-orange-900 dark:bg-gray-800 backdrop-blur-sm
                shadow-[0_0_30px_-5px] ${colorClass}
                transform transition-all duration-500 animate-in fade-in zoom-in
           `}>
